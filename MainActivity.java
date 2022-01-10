@@ -18,7 +18,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private AdView mAdView;
-    private CardView programacaoCanais, testarDarkflix;
+    private CardView programacaoCanais, enviarOi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         mAdView.loadAd(adRequest);
 
         programacaoCanais = findViewById(R.id.programacaoCanaisCardView);
-        testarDarkflix = findViewById(R.id.cardViewHelloWorld);
+        enviarOi = findViewById(R.id.cardViewHelloWorld);
 
 
         programacaoCanais.setOnClickListener(new View.OnClickListener() {
@@ -47,12 +47,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        testarDarkflix.setOnClickListener(new View.OnClickListener() {
+        enviarOi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //criar um menu flutuante - passo 1
-                registerForContextMenu(testarDarkflix);
-                openContextMenu(testarDarkflix);
+                registerForContextMenu(enviarOi);
+                openContextMenu(enviarOi);
 
             }
         });
